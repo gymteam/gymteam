@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="clientes.css".css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn">
+            <span>&#9776;</span>
+        </div>
+        <ul>
+            <li>
+                <img src="./img/logo.jfif" alt="logo" class="logo">
+            </li>
+            <li><a href="./home.html" class="eta">Inicio</a></li>
+            <li><a href="" class="eta">Caja</a></li>
+            <li><a href="./coach.html" class="eta">Coach</a></li>
+            <li><a href="./clientes.html" class="eta">Clientes</a></li>
+            <li><a href="./proveedores.html" class="eta">Proveedores</a></li>
+            <li><a href="" class="eta">Reportes</a></li>
+        </ul>
+    </div>
+
+    <div class="clientes">
+        <div class="crud">
+            <a href="" class="modal1">Nuevo</a>
+            <!--<a href="" class="modal2">Editar</a>
+            <a href="" class="modal3" id="btneliminar">Eliminar</a>-->
+        </div>
+        <h2>Clientes del Gimnasio</h2>
+        <div class="tabla">
+
+            <form action="javascript:void(0);" id="buscarCliente">
+                <input type="text" name="cliente" id="cliente">
+                <a class="btnb btnbuscar" id="btnbuscar">Buscar</a>
+            </form>
+            <table class="tabladatos" id="tabladatos">
+                <thead>
+                    <tr>
+                        <td class="tdtitulo">Nombre</td>
+                        <td class="tdtitulo">Primer apellido</td>
+                        <td class="tdtitulo">Segundo apellido</td>
+                        <td class="tdtitulo">Edad</td>
+                        <td class="tdtitulo">Opciones</td>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="contenedor-modal"> 
+        <div class="modal cierre-modal">
+            <p class="cierre">X</p>
+            <div class="formulario">
+                <form id="regcliente"> 
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa nombre del cliente" class="datrec" ><br>
+                    <input type="text" name="apellido1" id="apellido1" placeholder="Igresa el primer apellido" class="datrec" ><br>
+                    <input type="text" name="apellido2" id="apellido2" placeholder="Igresa el segundo apellido" class="datrec" ><br>
+                    <input type="text" name="edad" id="edad" placeholder="18" class="datrec"><br>
+                    <button class="btn-enviar" id="btn-enviar">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+ <script>
+ 
+   // Your web app's Firebase configuration
+   var firebaseConfig = {
+     apiKey: "AIzaSyB1MMFzkx2ZSOXK31ezDNNQkVoFo8MiEFw",
+     authDomain: "gymteam-bfc71.firebaseapp.com",
+     projectId: "gymteam-bfc71",
+     storageBucket: "gs://gymteam-bfc71.appspot.com",
+     messagingSenderId: "909554766768",
+     appId: "1:909554766768:web:4a86241f02b3623b93fc75"
+   };
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+ 
+ </script>
+
+    <script src="./home.js"></script>
+    <script src="./clientes.js"></script>
+</body>
+</html>

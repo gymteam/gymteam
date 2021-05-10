@@ -1,0 +1,16 @@
+body{
+    background-image: url(./img/gimnasio-op2.jpg);
+    background-size: 100%;
+}
+.presentacion{
+    position:absolute;
+    width: 30%;
+    height: 30%;
+    top: 40%;
+    left: 38%;
+}
+.presentacion p{
+    color: rgb(250, 245, 245);
+    font-size:1.5rem;
+    
+}
